@@ -6,13 +6,13 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 14:17:14 by event             #+#    #+#             */
-/*   Updated: 2023/07/08 15:23:31 by event            ###   ########.fr       */
+/*   Updated: 2023/07/08 18:46:46 by event            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (i < size - 1 && src[i])
