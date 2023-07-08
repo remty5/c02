@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 10:16:06 by event             #+#    #+#             */
-/*   Updated: 2023/07/08 17:43:24 by event            ###   ########.fr       */
+/*   Updated: 2023/07/08 18:14:45 by event            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strcapitalize(char *str)
 	c = 1;
 	while (str[i] != '\0')
 	{
+		if ('A' <= str[i] && str[i] <= 'Z')
+			str[i] += 32;
 		if (c && 'a' <= str[i] && str[i] <= 'z')
 		{
 			str[i] -= 32;
@@ -26,8 +28,6 @@ char	*ft_strcapitalize(char *str)
 		}
 		else if ('0' <= str[i] && str[i] <= '9')
 			c = 0;
-		else if (!c && 'A' <= str[i] && str[i] <= 'Z')
-			str[i] += 32;
 		else if (str[i] < 'A' || ('Z' < str[i] && str[i] < 'a') || 'z' < str[i])
 			c = 1;
 		i++;
