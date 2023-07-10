@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 16:21:06 by event             #+#    #+#             */
-/*   Updated: 2023/07/09 23:13:01 by event            ###   ########.fr       */
+/*   Updated: 2023/07/10 14:11:22 by rvandepu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	ft_putstr_non_printable(char *str)
 		else
 		{
 			write(1, "\\", 1);
-			write(1, hex + str[i] / 16, 1);
-			write(1, hex + str[i] % 16, 1);
+			write(1, hex + (unsigned char) str[i] / 16, 1);
+			write(1, hex + (unsigned char) str[i] % 16, 1);
 		}
 		i++;
 	}
